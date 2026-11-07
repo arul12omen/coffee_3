@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#141210">
+<title>Niskala – Kopi yang bikin balik lagi</title>
+<meta name="description" content="Niskala: kopi pilihan, tempat nyaman, pesan cepat lewat WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="split">
+
+  <!-- =====================================================
+       SISI KIRI: PANEL VISUAL (menempel, berganti sesuai bagian)
+       ===================================================== -->
+  <aside class="stage">
+    <div class="stage-in">
+
+      <div class="st-top">
+        <a class="logo" href="#beranda"><i></i>Niskala</a>
+        <a class="btn b-acc sm" href="https://wa.me/62XXXXXXXXXX?text=Halo%20Niskala%2C%20saya%20mau%20tanya" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+          Chat WhatsApp
+        </a>
+      </div>
+
+      <div class="scenes">
+
+        <!-- Scene 1: Beranda -->
+        <div class="scene scene-home on" data-for="home">
+          <div class="badge" aria-hidden="true">
+            <svg viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="58" fill="#A8E6C1"/>
+              <defs><path id="cp" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+              <text font-size="9" font-weight="700" letter-spacing="1.5" fill="#0E1A13" font-family="Unbounded,sans-serif"><textPath href="#cp">FRESH ROASTED • SMALL BATCH •</textPath></text>
+              <circle cx="60" cy="60" r="12" fill="#0E1A13"/>
+            </svg>
+          </div>
+         <img class="hero-photo" src="assets/bar.jpeg" alt="Kopi andalan Niskala"> 
+          <!-- <svg class="cup" viewBox="0 0 200 200" aria-hidden="true">
+            <circle cx="100" cy="100" r="94" fill="#241F1B"/>
+            <ellipse cx="100" cy="164" rx="70" ry="12" fill="#3C5A4A"/>
+            <path d="M155 92h12a17 17 0 0 1 0 34h-14" fill="none" stroke="#F4EFE8" stroke-width="10" stroke-linecap="round"/>
+            <path d="M42 80h116v30a58 58 0 0 1-116 0z" fill="#F4EFE8"/>
+            <ellipse cx="100" cy="80" rx="58" ry="11" fill="#7A4E34"/>
+            <path d="M80 56c-8-10 8-14 0-26M100 56c-8-10 8-14 0-26M120 56c-8-10 8-14 0-26" fill="none" stroke="#A8E6C1" stroke-width="6" stroke-linecap="round"/>
+          </svg> -->
+          <div class="chips"><span>Seduh pelan</span><span>Kopi pilihan</span><span>Tempat nyaman</span></div>
+        </div>
+
+        <!-- Scene 2: Menu (struk pesanan) -->
+        <div class="scene scene-menu" data-for="menu">
+          <div class="ticket">
+            <div class="tk-h"><span>Pesananmu</span><span id="tk-count">0 item</span></div>
+            <ul class="tk-list" id="tk-list"></ul>
+            <p class="tk-empty" id="tk-empty">Belum ada pesanan. Tekan + pada menu di sebelah kanan.</p>
+            <a class="btn b-acc tk-btn" id="tk-link" href="#" target="_blank" rel="noopener">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+              <span id="tk-cta">Chat WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Scene 3: Galeri (pratinjau foto yang dipilih) -->
+        <div class="scene scene-gal" data-for="galeri">
+          <figure class="preview g1" id="preview">
+            <img id="preview-img" alt="" hidden>
+            <figcaption id="preview-cap">Area utama</figcaption>
+          </figure>
+          <p class="hint">Pilih foto di sebelah kanan untuk melihatnya di sini</p>
+        </div>
+
+        <!-- Scene 4: Google Maps -->
+        <div class="scene scene-map" data-for="lokasi">
+          <div class="mapbox">
+            <!-- Ganti q= dengan nama/alamat kedai, atau tempel kode embed dari Google Maps > Bagikan > Sematkan peta -->
+            <iframe title="Lokasi Niskala di Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126792.44858998046!2d108.17617741690493!3d-6.737612589323639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ed965bbd15c61%3A0xe6220054108c5730!2sNISKALA%20COFFEE!5e0!3m2!1sid!2sid!4v1794086677798!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <div class="maplab">
+              <div><b>Niskala</b><span>[Alamat lengkap kedai]</span></div>
+              <a class="btn b-acc sm" href="https://maps.google.com/?q=Niskala" target="_blank" rel="noopener">Buka Maps</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scene 5: Kontak -->
+        <div class="scene scene-kontak" data-for="kontak">
+          <div class="wm"><span class="o">Nama</span><span class="f">Kedai</span></div>
+          <p class="wm-sub">@niskala_coffee</p>
+        </div>
+
+      </div>
+
+      <nav class="index" aria-label="Navigasi bagian">
+        <a href="#beranda" data-for="home" class="on"><b>01</b>Beranda</a>
+        <a href="#menu" data-for="menu"><b>02</b>Menu</a>
+        <a href="#galeri" data-for="galeri"><b>03</b>Galeri</a>
+        <a href="#lokasi" data-for="lokasi"><b>04</b>Lokasi</a>
+        <a href="#kontak" data-for="kontak"><b>05</b>Kontak</a>
+      </nav>
+
+    </div>
+  </aside>
+
+  <!-- =====================================================
+       SISI KANAN: KETERANGAN (bergulir)
+       ===================================================== -->
+  <main class="content">
+
+    <!-- BERANDA -->
+    <section class="sec hero" id="beranda" data-scene="home">
+      <div class="badge-open"><i></i>Buka setiap hari · [JAM BUKA]</div>
+      <h1>Kopi <i class="pill p1"></i><br>yang bikin<br><i class="pill p2"></i> balik<br><span class="acc">lagi.</span></h1>
+      <p class="lead">Kedai kopi kecil dengan cita rasa besar. Seduh pelan, pilih menu favoritmu, dan pesan cepat lewat WhatsApp.</p>
+      <div class="ctas">
+        <a class="btn b-acc" href="https://wa.me/62XXXXXXXXXX?text=Halo%20Nama%20Kedai%2C%20saya%20mau%20pesan" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+          Pesan via WhatsApp
+        </a>
+        <a class="btn b-line" href="#menu">
+          Lihat menu
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section class="sec" id="tentang" data-scene="home">
+      <div class="eyebrow">Tentang kami</div>
+      <p class="stmt">Niskala adalah kedai kopi kecil dengan cita rasa besar. Kami <span class="hl1">menyeduh pelan</span>, memilih biji dengan teliti, dan menyiapkan tempat yang <span class="hl2">nyaman</span> untuk kerja, ngobrol, atau sekadar diam.</p>
+      <div class="values">
+        <div class="value"><b class="n">01</b><div><strong>Biji pilihan</strong><span>Dipilih dari petani lokal agar rasa konsisten di setiap cangkir.</span></div></div>
+        <div class="value"><b class="n">02</b><div><strong>Seduh teliti</strong><span>Takaran, suhu, dan waktu dijaga supaya hasilnya pas.</span></div></div>
+        <div class="value"><b class="n">03</b><div><strong>Tempat nyaman</strong><span>Ruang hangat untuk bekerja, berkumpul, atau rehat sebentar.</span></div></div>        
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="sec" id="menu" data-scene="menu">
+      <div class="eyebrow">Menu</div>
+      <h2>Pilih favoritmu.</h2>
+      <p class="sub">Tekan + untuk menambah, lalu kirim pesanan lewat WhatsApp.</p>
+      <div class="tabs" role="tablist" aria-label="Kategori menu">
+        <button class="tab on" role="tab" data-cat="kopi" aria-selected="true">Kopi</button>
+        <button class="tab" role="tab" data-cat="nonkopi" aria-selected="false">Non-Kopi</button>
+        <button class="tab" role="tab" data-cat="makanan" aria-selected="false">Makanan</button>
+      </div>
+      <div class="rows" id="rows"></div>
+    </section>
+
+    <!-- GALERI -->
+    <section class="sec" id="galeri" data-scene="galeri">
+      <div class="eyebrow">Galeri</div>
+      <h2>Suasana yang bikin betah.</h2>
+      <div class="bento">
+        <!-- Tiap kotak bisa diisi foto: hapus tanda komentar pada <img> lalu isi path foto Anda -->
+        <button class="tile g1" data-cls="g1" data-title="Area utama" aria-pressed="true"><img src="assets/utama.jpeg" alt="utama"><span class="st">Area utama</span></button>
+        <button class="tile g2" data-cls="g2" data-title="bar kopi" aria-pressed="false"><img src="assets/bar.jpeg" alt="bar kopi"><span class="st">bar</span></button>
+        <button class="tile g3" data-cls="g3" data-title="Signature drink" aria-pressed="false"><img src="assets/signature.jpeg" alt="Minuman andalan"><span class="st">Signature</span></button>
+        <button class="tile g4" data-cls="g4" data-title="Sudut duduk" aria-pressed="false"><img src="assets/sudut.jpeg" alt="Sudut duduk"><span class="st">Sudut duduk</span></button>
+        <button class="tile g5" data-cls="g5" data-title="Makanan" aria-pressed="false"><img src="assets/makanan.jpeg" alt="Makanan"><span class="st">Makanan</span></button>
+        <button class="tile g6" data-cls="g6" data-title="Suasana" aria-pressed="false"><img src="assets/suasana.jpeg" alt="Suasana"><span class="st">Suasana</span></button>
+      </div>
+    </section>
+
+    <!-- LOKASI -->
+    <section class="sec" id="lokasi" data-scene="lokasi">
+      <div class="eyebrow">Lokasi</div>
+      <h2>Sokin, Ngopi.</h2>
+      <div class="info">
+        <div class="r">
+          <svg class="ico-l" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          <div><b>Alamat</b><span>[Alamat lengkap kedai, kecamatan, kota]</span></div>
+        </div>
+        <div class="r">
+          <svg class="ico-l" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div><b>Jam buka</b><span>[Senin – Minggu, 00.00 – 00.00 WIB]</span></div>
+        </div>
+        <div class="r">
+          <svg class="ico-l" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+          <div><b>WhatsApp</b><span>[+62 8XX-XXXX-XXXX]</span></div>
+        </div>
+      </div>
+      <div class="ctas">
+        <a class="btn b-acc" href="https://maps.app.goo.gl/TbH5LWRhBtncKaWd6" target="_blank" rel="noopener">
+          Buka di Google Maps
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+        <a class="btn b-line" href="https://wa.me/62XXXXXXXXXX?text=Halo%20Nama%20Kedai%2C%20saya%20mau%20reservasi" target="_blank" rel="noopener">Reservasi</a>
+      </div>
+      <!-- Peta untuk layar kecil (di layar lebar, peta tampil di panel kiri) -->
+      <div class="map-inline">
+        <iframe title="Lokasi niskala di Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Monas+Jakarta&output=embed"></iframe>
+      </div>
+    </section>
+
+    <!-- KONTAK: INSTAGRAM + CTA -->
+    <section class="sec" id="kontak" data-scene="kontak">
+      <div class="eyebrow">Instagram</div>
+      <div class="igc">
+        <div>
+          <h3>@niskala</h3>
+          <p>Menu baru, promo, dan cerita harian ada di Instagram.</p>
+          <a class="btn b-line" href="https://instagram.com/niskala_coffee" target="_blank" rel="noopener">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            Ikuti kami
+          </a>
+        </div>
+        <!-- Tiga kotak ini bisa diganti widget feed Instagram (Behold, Elfsight, SnapWidget) -->
+        <div class="igt">
+          <a href="https://instagram.com/niskala_coffee" target="_blank" rel="noopener" aria-label="Buka Instagram" class="i1"></a>
+          <a href="https://instagram.com/niskala_coffee" target="_blank" rel="noopener" aria-label="Buka Instagram" class="i2"></a>
+          <a href="https://instagram.com/niskala_coffee" target="_blank" rel="noopener" aria-label="Buka Instagram" class="i3"></a>
+        </div>
+      </div>
+
+      <div class="cta">
+        <div>
+          <h2>Mau reservasi tempat?</h2>
+          <p>Kirim pesan lewat WhatsApp, kami balas secepatnya.</p>
+        </div>
+        <a class="btn b-dark" href="https://wa.me/62XXXXXXXXXX?text=Halo%20Nama%20Kedai%2C%20saya%20mau%20reservasi" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+          Chat sekarang
+        </a>
+      </div>
+
+      <footer class="foot">
+        <div>© <span id="year">2026</span> Niskala. Seluruh hak cipta dilindungi.</div>
+        <nav aria-label="Tautan sosial">
+          <a href="https://instagram.com/niskala_coffee" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://wa.me/62XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://maps.app.goo.gl/TbH5LWRhBtncKaWd6" target="_blank" rel="noopener">Google Maps</a>
+        </nav>
+      </footer>
+    </section>
+
+  </main>
+</div>
+
+<!-- Bar pesanan (tampil di layar kecil saja; di layar lebar pesanan tampil di panel kiri) -->
+<div class="bar" id="bar">
+  <span id="bar-text">Ada pertanyaan?</span>
+  <a id="bar-link" href="#" target="_blank" rel="noopener">
+    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+    <span id="bar-cta">Chat WhatsApp</span>
+  </a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
